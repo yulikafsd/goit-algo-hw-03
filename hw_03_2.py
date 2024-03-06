@@ -1,6 +1,6 @@
 import random
 
-def get_range():
+def get_range() -> tuple:
 
     print('Згенеруємо числа для лотереї!\n')
     
@@ -27,7 +27,7 @@ def get_range():
                 quantity = int(input(f'Скільки унікальних чисел генеруємо? Оберіть число між 1 та {max-min+1}: '))
             
             # Записуємо всі значення в об'єкт
-            lottery_range = {'min': min, 'max': max, 'quantity': quantity}
+            lottery_range = (min, max, quantity)
             
             return lottery_range
 
@@ -37,16 +37,11 @@ def get_range():
 
 def get_numbers_ticket() -> list:
     
-    # Генерація та повернення списка чисел
-    lottery_range = get_range()
-
-    min = lottery_range['min']
-    max = lottery_range['max']
-    quantity = lottery_range['quantity']
-
+    min, max, quantity = get_range()
     numbers = []
     population = []
 
+    # Генерація та повернення списка чисел
     for num in range(min, max+1):
         population.append(num)
     
