@@ -38,4 +38,5 @@ def get_days_from_today():
         print('Дата введена у невірному форматі.\nСпробуйте знову у форматі "дд.мм.рррр".')
         get_days_from_today()
 
-get_days_from_today()
+if __name__ == '__main__':
+    get_days_from_today()

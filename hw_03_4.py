@@ -1,9 +1,5 @@
 from datetime import date, datetime
-
-users = [
-    {"name": "John Doe", "birthday": "1985.03.03"},
-    {"name": "Jane Smith", "birthday": "1990.03.06"}
-]
+from data import users
 
 def get_upcoming_birthdays(users: list) -> list:
     upcoming_bd_users = []
@@ -34,8 +30,8 @@ def get_upcoming_birthdays(users: list) -> list:
             bd_user = {'name' : user['name'], 'congratulation_date': congrat_date_string}
             upcoming_bd_users.append(bd_user)
     
+    print("Список привітань на цьому тижні:", upcoming_bd_users)
     return upcoming_bd_users
 
-
-upcoming_birthdays = get_upcoming_birthdays(users)
-print("Список привітань на цьому тижні:", upcoming_birthdays)
+if __name__ == '__main__':
+    get_upcoming_birthdays(users)
