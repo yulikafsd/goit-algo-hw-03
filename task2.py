@@ -18,8 +18,8 @@ def koch_side(n):
             t.left(angle)
 
 
-for _ in range(3):
-    koch_side(recur_depth)
-    t.right(120)
-
-screen.mainloop()
+if __name__ == "__main__":
+    for _ in range(3):
+        koch_side(recur_depth)
+        t.right(120)
+    screen.mainloop()
