@@ -1,3 +1,8 @@
+# Test directories for task 1
+test_dir
+dest_dir
+dist
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
